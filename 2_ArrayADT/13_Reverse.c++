@@ -8,6 +8,13 @@ struct Array
     int length;
 };
 
+void swap(int *x,int*y){
+    int temp;
+    temp=*x;
+    *x=*y;
+    *y=temp;
+}
+
 void Display(struct Array arr){
 
     int i;
@@ -32,6 +39,13 @@ void Reverse(struct Array *arr){
 
 }
 
+void Reverse2(struct Array *arr){
+
+    int i,j;
+    for(i=0,j=arr->length;i<j;i++,j--){
+        swap(&arr->A[i],&arr->A[j]);
+    }
+}
 
 
 int main(){
